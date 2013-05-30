@@ -1,0 +1,65 @@
+<head>
+  <title>supermarket</title>
+</head>
+
+<body>
+  {{loginButtons}}
+  <p />
+  {{> form}}
+  <p />
+  {{> summary}}
+</body>
+
+<template name="form">
+  <div class="outer">
+    <form class="supermarket-form">
+      <div class="form-field">
+        <label>Supermarket:</label>
+        <select id="supermarket">
+          <option value="default">Please select one</option>
+          {{#each supermarkets}}
+            <option value="{{name}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Number of items purchased:</label>
+        <input id="numItems" type="text" value="" />
+      </div>
+    
+      <div class="form-field">
+        <label>Total cost of purchases:</label>
+        <input id="totCost" type="text" value="" />
+      </div>
+    
+      <div class="form-field">
+        <label>Postcode:</label>
+        <input id="postcode" type="text" value="" />
+      </div>
+      
+      <div class="form-field">
+        <input class="submit" type="button" value="Submit" />
+      </div>
+    </form>
+  </div>
+</template>
+<template name="summary">
+  <table class="summaryTab">
+    <tr>
+      <th>Store</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Mean</th>
+      <th>Std</th>
+    </tr>
+    {{#each summary}}
+      <tr>
+        <td>{{Store}}</td>
+        <td>{{High}}</td>
+        <td>{{Low}}</td>
+        <td>{{Mean}}</td>
+        <td>{{Std}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</template>

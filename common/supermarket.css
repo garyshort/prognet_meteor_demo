@@ -1,0 +1,53 @@
+.outer {
+  background-color: lightgray;
+  border: dashed;
+  padding: 5px;
+  width: 500px;
+}
+
+.form-field {
+    clear: both;
+    display: block;
+    position: relative;
+    font-family: "Tahoma";
+    font-size: 18px;
+    padding-top: 8px;
+}
+
+.form-field label {
+    float: left;
+    width: 250px;
+    text-align: right;
+}
+
+.form-field input {
+  font-family: "Tahoma";
+  font-size: 18px;
+}
+
+.form-field select {
+  font-family: "Tahoma";
+  font-size: 18px;
+}
+
+.form-field input[type="button"] {
+  margin-left: 250px;
+}
+
+.summaryTab {
+  font-family: "Tahoma";
+  font-size: 18px;
+  width: 515px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.summaryTab tr:nth-child(2n+1) {
+  background-color: lightblue;
+}
+
+.summaryTab tr:nth-child(2n) {
+  background-color: cornsilk;
+}
+
+
